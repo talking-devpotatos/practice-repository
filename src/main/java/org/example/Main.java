@@ -21,18 +21,28 @@ public class Main {
         System.out.println("컴퓨터의 선택: " + options[computerChoice]);
 
         // 승패 로직
-        if (userChoice == computerChoice) {
-            System.out.println("결과: 비겼습니다!");
-        } else if ((userChoice == 0 && computerChoice == 2) ||
-                (userChoice == 1 && computerChoice == 0) ||
-                (userChoice == 2 && computerChoice == 1)) {
-            System.out.println("결과: 당신이 이겼습니다! 축하합니다.");
-        } else {
-            System.out.println("결과: 컴퓨터가 이겼습니다. 아쉽네요!");
-        }
+//        if (userChoice == computerChoice) {
+//            System.out.println("결과: 비겼습니다!");
+//        } else if ((userChoice == 0 && computerChoice == 2) ||
+//                (userChoice == 1 && computerChoice == 0) ||
+//                (userChoice == 2 && computerChoice == 1)) {
+//            System.out.println("결과: 당신이 이겼습니다! 축하합니다.");
+//        } else {
+//            System.out.println("결과: 컴퓨터가 이겼습니다. 아쉽네요!");
+//        }
 
         scanner.close();
         // switch 문으로도 바꿀 수 있는데 해볼사람
     }
+
+    switch (userChoice == computerChoice)
+    {
+        case 1:
+            System.out.println("결과: 비겼습니다!");
+            break;
+        case 2:
+
+    }
+
 
 }
