@@ -9,7 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        String[] options = {"가위", "", ""};
+        String[] options = {"가위", "바위", "보"};
 
         System.out.println("");
         int userChoice = scanner.nextInt();
@@ -31,6 +31,18 @@ public class Main {
             System.out.println("결과: 컴퓨터가 이겼습니다. 아쉽네요!");
         }
 
+        switch (userChoice) {
+            case computerChoice :
+
+                break;
+            case 0:
+                switch (computerChoice){
+                    case 0 : System.out.println("결과: 비겼습니다!");
+                    case 2 : System.out.println("결과: 당신이 이겼습니다! 축하합니다.");
+                }
+                break;
+            case 1:
+        }
         scanner.close();
         // switch 문으로도 바꿀 수 있는데 해볼사람
     }
