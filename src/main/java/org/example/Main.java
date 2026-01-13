@@ -9,9 +9,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        String[] options = {"가위", "", ""};
+        String[] options = {"가위", "바위", "보"};
 
-        System.out.println("");
+        System.out.println("0~2까지 숫자 중 하나를 입력하시오");
         int userChoice = scanner.nextInt();
 
         // 컴퓨터의 선택 (0~2 사이의 랜덤 숫자)
@@ -21,6 +21,26 @@ public class Main {
         System.out.println("컴퓨터의 선택: " + options[computerChoice]);
 
         // 승패 로직
+        int A =  computerChoice - userChoice;
+        switch (A)
+        {
+            case 0:
+                System.out.println("결과: 비겼습니다!");
+                break;
+            case -1, 2:
+                System.out.println("결과: 당신이 이겼습니다! 축하합니다.");
+                break;
+//            case 2:
+//                System.out.println("결과: 당신이 이겼습니다! 축하합니다.");
+//                break;
+            default:
+                System.out.println("결과: 컴퓨터가 이겼습니다. 아쉽네요!");
+                break;
+
+
+
+        }
+
 //        if (userChoice == computerChoice) {
 //            System.out.println("결과: 비겼습니다!");
 //        } else if ((userChoice == 0 && computerChoice == 2) ||
@@ -35,14 +55,7 @@ public class Main {
         // switch 문으로도 바꿀 수 있는데 해볼사람
     }
 
-    switch (userChoice == computerChoice)
-    {
-        case 1:
-            System.out.println("결과: 비겼습니다!");
-            break;
-        case 2:
 
-    }
 
 
 }
