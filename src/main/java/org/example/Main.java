@@ -11,7 +11,7 @@ public class Main {
 
         String[] options = {"가위", "바위", "보"};
 
-        System.out.println("0~2까지 숫자 중 하나를 입력하시오");
+        System.out.println("0,1,2중 하나를 고르시오");
 
         int userChoice = scanner.nextInt();
 
@@ -21,24 +21,31 @@ public class Main {
         System.out.println("나의 선택: " + options[userChoice]);
         System.out.println("컴퓨터의 선택: " + options[computerChoice]);
 
-        // 승패 로직
-        int A =  computerChoice - userChoice;
-        switch (A)
-        {
+
+//        // 승패 로직
+//        if (userChoice == computerChoice) {
+//            System.out.println("결과: 비겼습니다!");
+//        } else if ((userChoice == 0 && computerChoice == 2) ||
+//                (userChoice == 1 && computerChoice == 0) ||
+//                (userChoice == 2 && computerChoice == 1)) {
+//            System.out.println("결과: 당신이 이겼습니다! 축하합니다.");
+//        } else {
+//            System.out.println("결과: 컴퓨터가 이겼습니다. 아쉽네요!");
+//        }
+
+        int result = userChoice - computerChoice;
+        switch (result) {
             case 0:
                 System.out.println("결과: 비겼습니다!");
                 break;
-            case -1, 2:
+            case -2:
                 System.out.println("결과: 당신이 이겼습니다! 축하합니다.");
                 break;
-//            case 2:
-//                System.out.println("결과: 당신이 이겼습니다! 축하합니다.");
-//                break;
+            case 1:
+                System.out.println("결과: 당신이 이겼습니다! 축하합니다.");
+                break;
             default:
                 System.out.println("결과: 컴퓨터가 이겼습니다. 아쉽네요!");
-                break;
-
-
 
         }
 
@@ -57,7 +64,4 @@ public class Main {
         // 누가 바꾸는지 함 볼까
     }
 
-
-
-
-}
+    }
