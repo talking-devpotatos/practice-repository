@@ -9,9 +9,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        String[] options = {"가위", "바위", "보"};
+        String[] options = {"가위", "", ""};
 
-        System.out.println("가위(0), 바위(1), 보(2) 중 하나를 숫자로 입력하세요:");
+        System.out.println("");
         int userChoice = scanner.nextInt();
 
         // 컴퓨터의 선택 (0~2 사이의 랜덤 숫자)
@@ -32,5 +32,7 @@ public class Main {
         }
 
         scanner.close();
+        // switch 문으로도 바꿀 수 있는데 해볼사람
     }
+
 }
