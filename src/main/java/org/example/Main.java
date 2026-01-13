@@ -12,6 +12,7 @@ public class Main {
         String[] options = {"가위", "바위", "보"};
 
         System.out.println("0~2까지 숫자 중 하나를 입력하시오");
+
         int userChoice = scanner.nextInt();
 
         // 컴퓨터의 선택 (0~2 사이의 랜덤 숫자)
@@ -53,6 +54,7 @@ public class Main {
 
         scanner.close();
         // switch 문으로도 바꿀 수 있는데 해볼사람
+        // 누가 바꾸는지 함 볼까
     }
 
 
