@@ -1,17 +1,36 @@
 package org.example;
 
-//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
-// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+import java.util.Random;
+import java.util.Scanner;
+
+
 public class Main {
     public static void main(String[] args) {
-        //TIP 캐럿을 강조 표시된 텍스트에 놓고 <shortcut actionId="ShowIntentionActions"/>을(를) 누르면
-        // IntelliJ IDEA이(가) 수정을 제안하는 것을 확인할 수 있습니다.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP <shortcut actionId="Debug"/>을(를) 눌러 코드 디버그를 시작하세요. 1개의 <icon src="AllIcons.Debugger.Db_set_breakpoint"/> 중단점을 설정해 드렸습니다
-            // 언제든 <shortcut actionId="ToggleLineBreakpoint"/>을(를) 눌러 중단점을 더 추가할 수 있습니다.
-            System.out.println("i = " + i);
+        String[] options = {"가위", "바위", "보"};
+
+        System.out.println("가위(0), 바위(1), 보(2) 중 하나를 숫자로 입력하세요:");
+        int userChoice = scanner.nextInt();
+
+        // 컴퓨터의 선택 (0~2 사이의 랜덤 숫자)
+        int computerChoice = random.nextInt(3);
+
+        System.out.println("나의 선택: " + options[userChoice]);
+        System.out.println("컴퓨터의 선택: " + options[computerChoice]);
+
+        // 승패 로직
+        if (userChoice == computerChoice) {
+            System.out.println("결과: 비겼습니다!");
+        } else if ((userChoice == 0 && computerChoice == 2) ||
+                (userChoice == 1 && computerChoice == 0) ||
+                (userChoice == 2 && computerChoice == 1)) {
+            System.out.println("결과: 당신이 이겼습니다! 축하합니다.");
+        } else {
+            System.out.println("결과: 컴퓨터가 이겼습니다. 아쉽네요!");
         }
+
+        scanner.close();
     }
 }
