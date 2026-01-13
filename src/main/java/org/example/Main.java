@@ -9,9 +9,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        String[] options = {"가위", "", ""};
+        String[] options = {"가위", "보", "바위"};
 
-        System.out.println("");
+        System.out.println("0에서 2까지 입력해봐요");
         int userChoice = scanner.nextInt();
 
         // 컴퓨터의 선택 (0~2 사이의 랜덤 숫자)
@@ -33,6 +33,7 @@ public class Main {
 
         scanner.close();
         // switch 문으로도 바꿀 수 있는데 해볼사람
+        // 누가 바꾸는지 함 볼까
     }
 
 }
