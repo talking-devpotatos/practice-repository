@@ -13,7 +13,7 @@ public class Main {
 
         String[] options = {"가위", "바위", "보"};
 
-        System.out.println("0,1,2중 하나를 고르시오");
+        System.out.println("0,1,2중 하나를 골라라");
 
         int userChoice = scanner.nextInt();
 
