@@ -10,6 +10,7 @@ public class Main {
         Random random = new Random();
         
         // 가현 / 가은 실습 완료
+        // 제발 돼라 제발
 
         String[] options = {"가위", "바위", "보"};
 
